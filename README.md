@@ -1,19 +1,48 @@
-# CUDAEnterpriseProject - CUDA NPP Filtering Lab
+# CudaAtScaleIP
 
 ## Project Description
 
-This project was created as a playground for investigating various filtering and image processing capabilities of the CUDA NPP Library.
-Currently, the project provides an implementation of the following filters:
- * Canny Edge Detection Filter (aka. canny);
- * Sobel Edge Detection Filter (aka. sobel);
- * Gauss Smooth Filter  (aka. gauss);
- * Sharpening Filter  (aka. sharpen).
- 
- The project allows to choose the input image file in BMP or PGM format, specify the needed filter and provide the filename or directory for the output file.
- Currently, the project allows processing only one image, since there is a problem with NPP kernel execution, which fails when you try to run the same kernel again.
- The project requires a Coursera Lab environment to execute since it provides the configured CUDA environment and doesn't require additional configuration, which currently is out of the scope of this project.
- 
- The project structure follows the template from https://github.com/PascaleCourseraCourses/CUDAatScaleForTheEnterpriseCourseProjectTemplate.
+This project explores filtering and image processing using the CUDA NPP Library. It includes implementations for several image filters and allows users to process BMP or PGM image files. The project is designed to run in a Coursera Lab environment, providing a pre-configured CUDA setup.
+
+Implemented Filters
+
+The following filters are currently supported:
+
+Canny Edge Detection (canny)
+
+Sobel Edge Detection (sobel)
+
+Gaussian Smoothing (gauss)
+
+Sharpening (sharpen)
+
+Features
+
+Input Format: Supports BMP and PGM image files.
+
+Output: Allows specifying an output file or directory for processed images.
+
+Single Image Processing: Due to an NPP kernel execution issue, only one image can be processed per run.
+
+Requirements
+
+The project requires the Coursera Lab environment to execute. This environment provides a pre-configured CUDA setup, eliminating the need for additional configuration.
+
+Project Structure
+
+The project is based on the CUDA at Scale for the Enterprise Course Project Template.
+
+Usage
+
+Select an input image in BMP or PGM format.
+
+Specify the desired filter from the implemented options.
+
+Provide a filename or directory for the output file.
+
+Known Limitations
+
+Single Kernel Execution: The project currently supports processing only one image per run due to an issue with NPP kernel execution when reusing the same kernel.
 
 ## Code Organization
 
